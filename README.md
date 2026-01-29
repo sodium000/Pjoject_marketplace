@@ -2,8 +2,11 @@
 
 A comprehensive role-based project marketplace system where **Buyers** create projects and **Problem Solvers** execute them through a structured workflow with task management, file submissions, and review capabilities.
 
-![Project Status](https://img.shields.io/badge/status-complete-success)
-![License](https://img.shields.io/badge/license-MIT-blue)
+### Demo logIn (Admin)
+
+Email: [sodiumrdx1@gmail.com]
+Password: [@131020tonmoy]
+
 
 ## 🎯 System Overview
 
@@ -271,3 +274,5 @@ This application demonstrates a full-stack role-based access control system with
 3. Accept → task marked "completed"
 4. Reject → provide feedback, task marked "rejected"
 ```
+
+
