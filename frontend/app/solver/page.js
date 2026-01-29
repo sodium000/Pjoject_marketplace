@@ -1,10 +1,5 @@
 'use client';
 
-/**
- * Problem Solver Dashboard
- * Browse available projects and manage assigned projects
- */
-
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import RoleGuard from '@/components/RoleGuard';
@@ -65,7 +60,6 @@ export default function SolverDashboard() {
           <p className="text-gray-400">Browse projects and manage your work</p>
         </div>
 
-        {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           {[
             { label: 'Available Projects', value: availableProjects.length, color: 'from-cyan-500 to-blue-600', icon: '🔓' },
@@ -86,7 +80,6 @@ export default function SolverDashboard() {
           ))}
         </div>
 
-        {/* Tabs */}
         <div className="flex gap-2 mb-6">
           {['available', 'my-requests', 'assigned'].map((tab) => (
             <button
@@ -103,7 +96,6 @@ export default function SolverDashboard() {
           ))}
         </div>
 
-        {/* Content */}
         {loading ? (
           <div className="text-center py-12">
             <div className="w-12 h-12 border-4 border-green-500 border-t-transparent rounded-full spinner mx-auto mb-4"></div>

@@ -1,9 +1,5 @@
 'use client';
 
-/**
- * Landing Page with Login/Register
- */
-
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
@@ -19,7 +15,6 @@ export default function Home() {
 
   useEffect(() => {
     if (user) {
-      // Redirect based on role
       if (user.role === 'admin') router.push('/admin');
       else if (user.role === 'buyer') router.push('/buyer');
       else router.push('/solver');
@@ -46,7 +41,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
-      {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full opacity-20 blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full opacity-20 blur-3xl"></div>
@@ -58,7 +52,6 @@ export default function Home() {
         transition={{ duration: 0.5 }}
         className="relative w-full max-w-md"
       >
-        {/* Header */}
         <div className="text-center mb-8">
           <motion.h1
             initial={{ opacity: 0 }}
@@ -71,7 +64,6 @@ export default function Home() {
           <p className="text-gray-400 text-sm">Role-based project workflow system</p>
         </div>
 
-        {/* Auth Card */}
         <div className="glass rounded-2xl p-8 shadow-2xl">
           <div className="flex gap-2 mb-6">
             <button

@@ -61,14 +61,7 @@ After registering your first user through the app:
 1. Open MongoDB Compass
 2. Connect to `mongodb://localhost:27017`
 3. Select `project_marketplace` database
-4. Select `users` collection
-5. Find your user
-6. Click "Edit" and change `role` to `"admin"`
-7. Click "Update"
 
-### Using mongosh (Command Line)
-```javascript
-mongosh
 
 use project_marketplace
 

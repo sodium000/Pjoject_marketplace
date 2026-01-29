@@ -92,7 +92,6 @@ export default function BuyerProjectDetail() {
           <ProjectLifecycle currentStatus={project.status} />
         </div>
 
-        {/* Tabs */}
         <div className="flex gap-2 mb-6">
           {['overview', 'requests', 'tasks'].map((tab) => (
             <button
@@ -109,7 +108,6 @@ export default function BuyerProjectDetail() {
           ))}
         </div>
 
-        {/* Tab Content */}
         {activeTab === 'overview' && (
           <div className="glass rounded-xl p-6">
             <h3 className="text-xl font-bold mb-4">Project Info</h3>

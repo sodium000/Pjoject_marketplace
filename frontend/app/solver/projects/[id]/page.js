@@ -133,7 +133,6 @@ export default function SolverProjectDetail() {
           <ProjectLifecycle currentStatus={project.status} />
         </div>
 
-        {/* Tasks */}
         <div className="mb-6">
           <h2 className="text-2xl font-bold mb-4">Tasks ({tasks.length})</h2>
           {tasks.length === 0 ? (
@@ -163,7 +162,6 @@ export default function SolverProjectDetail() {
         </div>
       </div>
 
-      {/* Create Task Modal */}
       {showTaskModal && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 z-50">
           <motion.div
@@ -194,7 +192,6 @@ export default function SolverProjectDetail() {
         </div>
       )}
 
-      {/* Upload Modal */}
       {showUploadModal && selectedTask && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 z-50">
           <motion.div

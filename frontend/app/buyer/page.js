@@ -1,9 +1,5 @@
 'use client';
 
-/**
- * Buyer Dashboard
- * View projects, incoming requests, and manage assignments
- */
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
@@ -66,7 +62,7 @@ export default function BuyerDashboard() {
     <RoleGuard allowedRoles={['buyer']}>
       <Header />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header */}
+
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-4xl font-bold mb-2">Buyer Dashboard</h1>
@@ -80,7 +76,6 @@ export default function BuyerDashboard() {
           </button>
         </div>
 
-        {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
           {[
             { label: 'Total', value: stats.total, color: 'from-gray-600 to-gray-700', icon: '📊' },
@@ -102,7 +97,6 @@ export default function BuyerDashboard() {
           ))}
         </div>
 
-        {/* Projects Grid */}
         {loading ? (
           <div className="text-center py-12">
             <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full spinner mx-auto mb-4"></div>
@@ -133,7 +127,6 @@ export default function BuyerDashboard() {
         )}
       </div>
 
-      {/* Create Project Modal */}
       {showCreateModal && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 z-50">
           <motion.div
