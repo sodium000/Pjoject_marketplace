@@ -74,26 +74,31 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`
- 
-      Port: ${PORT}
-      Environment: ${process.env.NODE_ENV || 'development'}
-      Database: MongoDB                            
-      Frontend: ${process.env.FRONTEND_URL || 'http://localhost:3000'}      
-  
-  `);
-  console.log('📡 API endpoints:');
-  console.log('   - POST   /api/auth/register');
-  console.log('   - POST   /api/auth/login');
-  console.log('   - GET    /api/users (admin)');
-  console.log('   - PATCH  /api/users/:id/role (admin)');
-  console.log('   - POST   /api/projects (buyer)');
-  console.log('   - GET    /api/projects');
-  console.log('   - POST   /api/requests (solver)');
-  console.log('   - PATCH  /api/requests/:id/accept (buyer)');
-  console.log('   - POST   /api/tasks (solver)');
-  console.log('   - POST   /api/submissions (solver)');
-  console.log('   - PATCH  /api/submissions/:id/accept (buyer)');
-  console.log('\n✅ Ready for connections!\n');
-});
+
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`
+   
+        Port: ${PORT}
+        Environment: ${process.env.NODE_ENV || 'development'}
+        Database: MongoDB                            
+        Frontend: ${process.env.FRONTEND_URL || 'http://localhost:3000'}      
+    
+    `);
+    console.log('📡 API endpoints:');
+    console.log('   - POST   /api/auth/register');
+    console.log('   - POST   /api/auth/login');
+    console.log('   - GET    /api/users (admin)');
+    console.log('   - PATCH  /api/users/:id/role (admin)');
+    console.log('   - POST   /api/projects (buyer)');
+    console.log('   - GET    /api/projects');
+    console.log('   - POST   /api/requests (solver)');
+    console.log('   - PATCH  /api/requests/:id/accept (buyer)');
+    console.log('   - POST   /api/tasks (solver)');
+    console.log('   - POST   /api/submissions (solver)');
+    console.log('   - PATCH  /api/submissions/:id/accept (buyer)');
+    console.log('\n✅ Ready for connections!\n');
+  });
+}
+
+module.exports = app;
